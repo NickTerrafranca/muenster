@@ -1,0 +1,10 @@
+<%= form_for @job do |f| %>
+  <%= f.label :companies %>:
+  <%= f.collection_select :company_id, @companies, :id, :name %><br>
+
+  <%= f.label :title %>:
+  <br><%= f.text_field :title %><br>
+  <%= f.label :description %>:
+  <br><%= f.text_area :description %><br>
+  <%= f.submit %>
+<% end %>

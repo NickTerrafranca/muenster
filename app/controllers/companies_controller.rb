@@ -18,7 +18,7 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(company_params)
     if @company.save
-      redirect_to @company #just company?
+      redirect_to @company
     else
       flash.now[:notice] = "Something whent wrong, you posting could not be saved."
       render :new
@@ -26,9 +26,9 @@ class CompaniesController < ApplicationController
   end
 
   def update
-    company = Company.find(params[:id])
-    company.update(company_params)
-    redirect_to company #@company
+    @company = Company.find(params[:id])
+    @company.update(company_params)
+    redirect_to @company
   end
 
   private
@@ -37,9 +37,3 @@ class CompaniesController < ApplicationController
       params.require(:company).permit(:name, :location, :industry, :description)
   end
 end
-
-  # def update
-  #   user = User.find(params[:id])
-  #   user.update(user_params)
-  #   redirect_to user
-  # end

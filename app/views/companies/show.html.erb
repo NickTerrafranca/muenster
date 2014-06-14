@@ -1,4 +1,6 @@
 <h2><%= @company.name %></h2>
+<%= link_to 'Post Job', new_job_path %><br>
+<%= link_to 'Edit company profile', edit_company_path %>
 <ul>
 <li>
   Description: <%=@company.description%>
@@ -19,6 +21,5 @@
 <%end%>
 </ul>
 <%= link_to 'All jobs', jobs_path %><br>
-<%= link_to 'Edit company profile', edit_company_path %><br>
-<%= link_to 'All companies', companies_path %>
 
+<%= link_to 'All companies', companies_path %>

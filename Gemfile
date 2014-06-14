@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+  source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
@@ -33,6 +33,7 @@ group :doc do
 end
 
 group :development do
+  gem 'pry-rails'
   gem 'quiet_assets'
 end
 
