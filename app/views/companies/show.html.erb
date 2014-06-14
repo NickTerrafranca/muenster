@@ -1,0 +1,17 @@
+<h2><%= @company.name %></h2>
+<ul>
+    <li>
+      Description: <%=@company.description%>
+    </li>
+
+    <li>
+      Industry: <%=@company.industry%>
+    </li>
+
+    <%@company.jobs.each do |job|%>
+      <li>
+          <p>Position available: <%=job.title%>: <%=job.description%></p>
+      </li>
+    <%end%>
+</ul>
+<%= link_to 'All jobs', jobs_path %>

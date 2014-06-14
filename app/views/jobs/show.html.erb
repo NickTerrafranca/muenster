@@ -1,0 +1,7 @@
+<h2>
+  <%= @job.title%>
+</h2>
+Location: <%= @job.company.location%>
+Name: <%= link_to @job.company.name, company_path(@job.company) %>
+Description: <%= @job.company.description%><br>
+<%= link_to 'Back', jobs_path %>
