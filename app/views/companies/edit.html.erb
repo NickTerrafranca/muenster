@@ -1,0 +1,15 @@
+<%= form_for @company do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br>
+
+  <%= f.label :location %>:
+  <%= f.text_field :location %><br>
+
+  <%= f.label :industry %>:
+  <%= f.text_field :industry %><br>
+
+  <%= f.label :description %>:
+  <%= f.text_area :description %><br>
+
+  <%= f.submit %>
+<% end %>
