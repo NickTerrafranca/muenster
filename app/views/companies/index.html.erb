@@ -1,4 +1,5 @@
 <h1>Companies</h1>
+<%= link_to 'Add Company', new_company_path %><br>
 <ul>
 <% @companies.each do |c| %>
     <li>
@@ -6,5 +7,5 @@
     </li>
   <%end%>
 </ul>
-<%= link_to 'Add Company', new_company_path %><br>
+
 <%= link_to 'All jobs', jobs_path %>

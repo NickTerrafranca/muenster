@@ -22,6 +22,16 @@ class JobsController < ApplicationController
     end
   end
 
+  def edit
+    @job = Job.find(params[:id])
+  end
+
+  def update
+    @job = Job.find(params[:id])
+    @job.update(job_params)
+    redirect_to @job
+  end
+
   private
 
   def job_params
